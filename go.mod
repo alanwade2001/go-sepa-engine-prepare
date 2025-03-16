@@ -4,8 +4,7 @@ go 1.24.1
 
 require (
 	github.com/alanwade2001/go-sepa-db v0.0.0-20250314181629-ba7d1fd3f464
-	github.com/alanwade2001/go-sepa-engine-data v0.0.0-20250315185514-84dc3434bb15
-	github.com/alanwade2001/go-sepa-engine-ingest v0.0.0-20250315183021-a7514ca58e1f
+	github.com/alanwade2001/go-sepa-engine-data v0.0.0-20250316074259-2c2d93c396dd
 	github.com/alanwade2001/go-sepa-infra v0.0.0-20250315081258-15a31e175e55
 	github.com/alanwade2001/go-sepa-q v0.0.0-20250314083628-f5d6c10782b5
 	github.com/jbub/banking v0.8.0
