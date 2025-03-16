@@ -4,19 +4,23 @@ go 1.24.1
 
 require (
 	github.com/alanwade2001/go-sepa-db v0.0.0-20250314181629-ba7d1fd3f464
-	github.com/alanwade2001/go-sepa-engine-data v0.0.0-20250316074259-2c2d93c396dd
+	github.com/alanwade2001/go-sepa-engine-data v0.0.0-20250316175625-3c09dbceb7ed
 	github.com/alanwade2001/go-sepa-infra v0.0.0-20250315081258-15a31e175e55
+	github.com/alanwade2001/go-sepa-iso v0.0.0-20250316080345-968f55e7353d
 	github.com/alanwade2001/go-sepa-q v0.0.0-20250314083628-f5d6c10782b5
 	github.com/jbub/banking v0.8.0
+	github.com/jinzhu/copier v0.4.0
+	github.com/stretchr/testify v1.9.0
+	golang.org/x/exp v0.0.0-20250305212735-054e65f0b394
 )
 
 require (
-	github.com/alanwade2001/go-sepa-iso v0.0.0-20250314075832-0caa02c0ee73 // indirect
 	github.com/alanwade2001/go-sepa-utils v0.0.0-20250314081604-0992fcffbc2d // indirect
 	github.com/bytedance/sonic v1.11.6 // indirect
 	github.com/bytedance/sonic/loader v0.1.1 // indirect
 	github.com/cloudwego/base64x v0.1.4 // indirect
 	github.com/cloudwego/iasm v0.2.0 // indirect
+	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/gabriel-vasile/mimetype v1.4.3 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
 	github.com/gin-gonic/gin v1.10.0 // indirect
@@ -38,12 +42,14 @@ require (
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/pelletier/go-toml/v2 v2.2.2 // indirect
+	github.com/pmezard/go-difflib v1.0.0 // indirect
+	github.com/satori/go.uuid v1.2.0 // indirect
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect
 	github.com/ugorji/go/codec v1.2.12 // indirect
 	golang.org/x/arch v0.8.0 // indirect
 	golang.org/x/crypto v0.23.0 // indirect
 	golang.org/x/net v0.25.0 // indirect
-	golang.org/x/sync v0.1.0 // indirect
+	golang.org/x/sync v0.12.0 // indirect
 	golang.org/x/sys v0.26.0 // indirect
 	golang.org/x/text v0.15.0 // indirect
 	google.golang.org/protobuf v1.34.1 // indirect

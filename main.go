@@ -14,9 +14,7 @@ type App struct {
 	infra    *inf.Infra
 	receiver *receiver.PaymentGroup
 	Postgres *db.Persist
-	PGRepos  *repository.PaymentGroup
-	PmtRepos *repository.Payment
-	TxRepos  *repository.Transaction
+	ReposMgr *repository.Manager
 	Iban     *service.Iban
 	Listener *q.Listener
 }
@@ -27,12 +25,10 @@ func NewApp() *App {
 
 	Stomp := q.NewStomp()
 	Postgres := db.NewPersist()
-	PGRepos := repository.NewPaymentGroup(Postgres)
-	PmtRepos := repository.NewPayment(Postgres)
-	TxRepos := repository.NewTransaction(Postgres)
+	ReposMgr := repository.NewManager(Postgres)
 
 	Delivery := service.NewDelivery(Stomp)
-	Service := service.NewPreparer(PGRepos, PmtRepos, TxRepos, Delivery)
+	Service := service.NewPreparer(ReposMgr, Delivery)
 	Receiver := receiver.NewPaymentGroup(Service)
 
 	Listener := q.Newlistener(Stomp, Receiver)
@@ -40,9 +36,7 @@ func NewApp() *App {
 	app := &App{
 		infra:    infra,
 		Postgres: Postgres,
-		PGRepos:  PGRepos,
-		PmtRepos: PmtRepos,
-		TxRepos:  TxRepos,
+		ReposMgr: ReposMgr,
 
 		Listener: Listener,
 	}
