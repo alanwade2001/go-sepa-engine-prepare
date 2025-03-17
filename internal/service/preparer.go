@@ -41,10 +41,6 @@ func (s *Preparer) Prepare(mdl *model.PaymentGroup) (err error) {
 		}
 	}
 
-	// if err = s.delivery.PaymentGroupIngested(mdl); err != nil {
-	// 	return err
-	// }
-
 	return nil
 }
 
@@ -61,6 +57,13 @@ func (s *Preparer) PreparePayment(pmt *entity.Payment) error {
 		if err = s.PrepareTransactions(pi3, txs); err != nil {
 			return nil
 		}
+	}
+
+	pMdl := &model.Payment{}
+	pMdl.FromEntity(pmt)
+
+	if err := s.delivery.PaymentPrepared(pMdl); err != nil {
+		return err
 	}
 
 	return nil
