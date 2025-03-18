@@ -99,6 +99,7 @@ func (s *Preparer) PrepareTransaction(pi3 *pain_001_001_03.PaymentInstructionInf
 
 		settlement := &entity.Settlement{
 			EndToEndID:    tx.EndToEndID,
+			Amount:        tx.Amt,
 			CdtTrfTxInf:   string(cdtTrfTxInf),
 			TxID:          uid.String(),
 			TransactionID: tx.Model.ID,
