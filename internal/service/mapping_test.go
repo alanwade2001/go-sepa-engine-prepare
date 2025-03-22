@@ -5,7 +5,7 @@ import (
 
 	"github.com/alanwade2001/go-sepa-iso/pacs_008_001_02"
 	"github.com/alanwade2001/go-sepa-iso/pain_001_001_03"
-	"github.com/stretchr/testify/assert"
+	"github.com/go-playground/assert/v2"
 )
 
 func Test(t *testing.T) {
@@ -55,7 +55,7 @@ func Test(t *testing.T) {
 			if actual, err := tC.mapper.Map(tC.pi3, tC.ct10); err != nil {
 				t.Error(err)
 			} else {
-				assert.Equal(t, tC.expected, actual, "expected should equal actual")
+				assert.Equal(t, tC.expected, actual)
 			}
 		})
 	}
